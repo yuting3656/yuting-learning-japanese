@@ -1,15 +1,13 @@
 import {
-  Box,
   Button,
   FormControl,
   Grid,
-  Input,
   InputLabel,
   MenuItem,
   Select,
   TextField,
 } from "@mui/material";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 
 //
 // IMPORT ZONE
@@ -39,10 +37,9 @@ const Day04 = () => {
     };
   }, [text]);
   const handleVocieOnChange = (v) => {
-    setVoice(v);
+    setVoice(v.target.value);
   };
   const handleTextOnChange = (e) => {
-    console.log("text ", e);
     setText(e.target.value);
   };
 
@@ -65,57 +62,55 @@ const Day04 = () => {
 
   return (
     <>
-      <Box maxWidth="md" style={{ textAlign: "center" }}>
-        <Grid
-          container
-          spacing={{ mobile: 1, tablet: 2, laptop: 3 }}
-          style={{ textAlign: "center" }}
-        >
-          <Grid item xs={12}>
-            <h1> Day 04</h1>
-          </Grid>
-          <Grid item xs={12}>
+      <Grid
+        container
+        spacing={{ mobile: 1, tablet: 2, laptop: 3 }}
+        style={{ textAlign: "center" }}
+      >
+        <Grid item xs={12}>
+          <h1> Day 04</h1>
+        </Grid>
+        <Grid item xs={12}>
+          <FormControl fullWidth>
+            <TextField
+              label="說話"
+              value={text}
+              onChange={(e) => handleTextOnChange(e)}
+            ></TextField>
+          </FormControl>
+          <Grid item xs={4}></Grid>
+        </Grid>
+        <Grid item xs={12}>
+          <Grid item xs={4}>
             <FormControl fullWidth>
-              <TextField
-                label="說話"
-                value={text}
-                onChange={(e) => handleTextOnChange(e)}
-              ></TextField>
+              <InputLabel> 選擇說話語音</InputLabel>
+              <Select
+                value={voice?.name}
+                label="選擇說話語音"
+                onChange={(v) => handleVocieOnChange(v)}
+              >
+                {window.speechSynthesis.getVoices().map((voice) => (
+                  <MenuItem key={voice.name} value={voice}>
+                    {voice.name}
+                  </MenuItem>
+                ))}
+              </Select>
             </FormControl>
-            <Grid item xs={4}></Grid>
-          </Grid>
-          <Grid item xs={12}>
-            <Grid item xs={4}>
-              <FormControl fullWidth>
-                <InputLabel> 選擇說話語音</InputLabel>
-                <Select
-                  value={voice?.name}
-                  label="選擇說話語音"
-                  onChange={(v) => handleVocieOnChange(v)}
-                >
-                  {window.speechSynthesis.getVoices().map((voice) => (
-                    <MenuItem key={voice.name} value={voice.name}>
-                      {voice.name}
-                    </MenuItem>
-                  ))}
-                </Select>
-              </FormControl>
-            </Grid>
-          </Grid>
-          <Grid container sx={12}>
-            <Grid item xs={4}>
-              <Button variant="contained" onClick={handlePlay}>
-                {isPaused ? "重播" : "播放"}
-              </Button>
-            </Grid>
-            <Grid item xs={4}>
-              <Button variant="contained" color="error" onClick={handlePause}>
-                暫停
-              </Button>
-            </Grid>
           </Grid>
         </Grid>
-      </Box>
+        <Grid container sx={12} spacing={2}>
+          <Grid item>
+            <Button variant="contained" onClick={handlePlay}>
+              {isPaused ? "重播" : "播放"}
+            </Button>
+          </Grid>
+          <Grid item>
+            <Button variant="contained" color="error" onClick={handlePause}>
+              暫停
+            </Button>
+          </Grid>
+        </Grid>
+      </Grid>
     </>
   );
 };
