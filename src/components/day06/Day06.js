@@ -10,7 +10,7 @@ import { GithubPicker } from "react-color";
 const Day06 = () => {
   const canvasRef = useRef(null);
   const [imgDataUrl, setImgDataUrl] = useState(undefined);
-  const [selectedColor, setSelectedColor] = useState("#fff");
+  const [selectedColor, setSelectedColor] = useState("#000");
   const [colorAnchor, setColorAnchor] = useState(null);
   const handleSaveOnClick = () => {
     const dataUrl = canvasRef.current.getDataURL();

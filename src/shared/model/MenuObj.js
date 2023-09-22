@@ -1,4 +1,8 @@
 export const MenuObj = {
+  day02: {
+    url: "/day02",
+    name: "react + render 開始！",
+  },
   day03: {
     url: "/day03",
     name: "Material UI",
