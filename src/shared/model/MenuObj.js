@@ -27,4 +27,8 @@ export const MenuObj = {
     url: "/day08",
     name: "記錄每天的更新！",
   },
+  day09: {
+    url: "/day09",
+    name: "補班好浮躁 不想上班～",
+  },
 };
