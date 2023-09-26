@@ -39,4 +39,8 @@ export const MenuObj = {
     url: "/day11",
     name: "開一個新 Katakana Table",
   },
+  day12: {
+    url: "/day12",
+    name: " 看 Table 說話～",
+  },
 };
