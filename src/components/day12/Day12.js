@@ -38,7 +38,7 @@ const Day12 = () => {
         setVoice(voices[0]);
       }
     });
-  }, []);
+  }, [voice]);
 
   const handlePlay = (words) => {
     const synth = window.speechSynthesis;
