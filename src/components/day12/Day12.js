@@ -28,17 +28,8 @@ const Day12 = () => {
     } else {
       setVoice(voices[0]);
     }
-    synth.addEventListener("voiceschanged", () => {
-      console.log("voice", voice);
-      const voices = synth.getVoices();
-      const jpVoice = voices.filter((d) => d.lang === "ja-JP");
-      if (jpVoice.lenth !== 0) {
-        setVoice(jpVoice[0]);
-      } else {
-        setVoice(voices[0]);
-      }
-    });
-  }, [voice]);
+  }, []);
+
 
   const handlePlay = (words) => {
     const synth = window.speechSynthesis;
