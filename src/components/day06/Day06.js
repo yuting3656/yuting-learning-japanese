@@ -12,6 +12,7 @@ const Day06 = () => {
   const [imgDataUrl, setImgDataUrl] = useState(undefined);
   const [selectedColor, setSelectedColor] = useState("#000");
   const [colorAnchor, setColorAnchor] = useState(null);
+
   const handleSaveOnClick = () => {
     const dataUrl = canvasRef.current.getDataURL();
     setImgDataUrl(dataUrl);

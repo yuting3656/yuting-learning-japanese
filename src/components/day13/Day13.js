@@ -78,14 +78,14 @@ const Day13 = () => {
         <h3>Day13 畫一下給看一下！ </h3>
       </Grid>
       <Grid container xs={12} justifyContent={"center"}>
-        <Grid item xs={6}>
+        <Grid item xs={12}>
           <Paper elevation={2}>
             <CanvasDraw
               style={{ margin: "auto" }}
               brushColor={selectedColor}
               // ref={(rf) => (canvasRef.current = rf)}
               ref={canvasRef}
-              canvasWidth={window.innerWidth > 1024 ? 800 : 400}
+              canvasWidth={window.innerWidth > 1024 ? 800 : 300}
             />
           </Paper>
         </Grid>
