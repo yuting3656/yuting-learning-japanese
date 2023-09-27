@@ -18,6 +18,7 @@ const Day09 = lazy(() => import("../components/day09/Day09"));
 const Day10 = lazy(() => import("../components/day10/Day10"));
 const Day11 = lazy(() => import("../components/day11/Day11"));
 const Day12 = lazy(() => import("../components/day12/Day12"));
+const Day13 = lazy(() => import("../components/day13/Day13"));
 
 const RouteContent = () => {
   return (
@@ -36,6 +37,7 @@ const RouteContent = () => {
           <Route path="/day10" element={<Day10 />} />
           <Route path="/day11" element={<Day11 />} />
           <Route path="/day12" element={<Day12 />} />
+          <Route path="/day13" element={<Day13 />} />
           <Route path="/" element={<Navigate to="/dashboard" />} />
         </Routes>
       </Suspense>

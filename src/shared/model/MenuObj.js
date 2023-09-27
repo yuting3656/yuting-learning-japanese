@@ -43,4 +43,8 @@ export const MenuObj = {
     url: "/day12",
     name: " 看 Table 說話～",
   },
+  day13: {
+    url: "/day13",
+    name: " 來看你寫的對不對拉！！",
+  },
 };
