@@ -47,4 +47,24 @@ export const MenuObj = {
     url: "/day13",
     name: " 來看你寫的對不對拉！！",
   },
+  day14: {
+    url: "/day14",
+    name: "我先擱著 準備放假拉～～～～",
+  },
+  day15: {
+    url: "/day15",
+    name: " 今天中秋節",
+  },
+  day16: {
+    url: "/day16",
+    name: "烤肉烤好多！！！！",
+  },
+  day17: {
+    url: "/day17",
+    name: "連假結束啦～～～",
+  },
+  day18: {
+    url: "/day18",
+    name: "永放不放棄！！！！！！！",
+  },
 };
