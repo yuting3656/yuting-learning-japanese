@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Grid } from "@mui/material";
-import { MenuObj } from "../../shared/model/MenuObj";
+import { menuObj } from "../../shared/model/menuObj";
 import { useNavigate } from "react-router-dom";
 
 //
@@ -15,15 +15,15 @@ const Day08 = () => {
 
   return (
     <Grid container direction={"column"} alignContent={"center"}>
-      {Object.keys(MenuObj).map((m, idx) => (
+      {Object.keys(menuObj).map((m, idx) => (
         <Grid
           xs={12}
           spacing={4}
           key={idx}
-          onClick={() => handleOnClick(MenuObj[m].url)}
+          onClick={() => handleOnClick(menuObj[m].url)}
         >
           <Button variant="outlined">
-            {m} - {MenuObj[m].name}
+            {m} - {menuObj[m].name}
           </Button>
         </Grid>
       ))}

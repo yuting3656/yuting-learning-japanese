@@ -10,7 +10,7 @@ import React, { useState } from "react";
 import MenuIcon from "@mui/icons-material/Menu";
 import { AccountCircle } from "@mui/icons-material";
 import { useNavigate } from "react-router-dom";
-import { MenuObj } from "../shared/model/MenuObj";
+import { menuObj } from "../shared/model/menuObj";
 //
 // IMPORT ZONE
 //
@@ -76,9 +76,9 @@ const Header = () => {
         open={Boolean(anchorEl)}
         onClose={() => handleMenuOnClose()}
       >
-        {Object.keys(MenuObj).map((m, idx) => (
-          <MenuItem key={idx} onClick={() => handleMenuOnClick(MenuObj[m].url)}>
-            {m} - {MenuObj[m].name}
+        {Object.keys(menuObj).map((m, idx) => (
+          <MenuItem key={idx} onClick={() => handleMenuOnClick(menuObj[m].url)}>
+            {m} - {menuObj[m].name}
           </MenuItem>
         ))}
       </Menu>
