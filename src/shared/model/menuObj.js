@@ -67,4 +67,8 @@ export const menuObj = {
     url: "/day18",
     name: "永放不放棄！！！！！！！",
   },
+  day19: {
+    url: "/day19",
+    name: "說一下話吧！！",
+  },
 };
