@@ -89,7 +89,7 @@ function Day21() {
       <Grid item xs={12}>
         <h1>Day 21 說一下 “金牌” 的日文看有什麼趣的事發生！</h1>
       </Grid>
-      <Grid item xs={6}>
+      <Grid item xs={12} md={6}>
         <Grid container spacing={5}>
           <Grid item xs={2} justifyItems="center">
             選擇語系
@@ -126,7 +126,7 @@ function Day21() {
           </Grid>
         </Grid>
       </Grid>
-      <Grid item xs={6}>
+      <Grid item xs={12} md={6}>
         {!isBrowserSupportFlag ? (
           <>
             {" "}
@@ -134,7 +134,7 @@ function Day21() {
           </>
         ) : (
           <Grid container xs={12}>
-            <Grid item xs={4}>
+            <Grid item xs={12} md={4}>
               {" "}
               <Button
                 variant="contained"
@@ -145,7 +145,7 @@ function Day21() {
                 開始聽
               </Button>
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={6} md={4}>
               {" "}
               <Button
                 variant="contained"
@@ -156,7 +156,7 @@ function Day21() {
                 停止
               </Button>
             </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={6} md={4}>
               {" "}
               <Button
                 variant="contained"
