@@ -1,0 +1,56 @@
+/* body{
+	display:flex;
+	justify-content:center;
+	align-items:center;
+} */
+.medal{
+	/* margin:8rem;*/
+	padding-left:1.8em; 
+	display: flex;
+    -webkit-animation: spin 4s infinite linear;
+}
+
+.medal-icon{
+	position:relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height:24px;
+	width:24px;
+	border-radius:100%;
+	border:2px solid transparent;
+	border-color:currentColor;
+	text-align: center;
+	font-size:16px;
+	margin-right:4px;
+	color:#FFF;
+}
+.medal-icon:before{
+	content:'';
+	z-index:-1;
+	position:absolute;
+	width:50%;
+	background-color:#B22B32;
+	height:1em;
+	top:-0.4em;
+}
+
+.medal-icon[data-medal="G"]{
+	border-color:#FEC223;
+	background: linear-gradient(135deg, #E7B120 0%,#E7B120 50%,#FEC223 50%,#FEC223 100%);
+}
+.medal-icon[data-medal="S"]{
+	border-color:#9FA6AC;
+	background: linear-gradient(135deg, #91979D 0%,#91979D 50%,#9FA6AC 50%,#9FA6AC 100%);
+}
+.medal-icon[data-medal="B"]{
+	border-color:#BA765F;
+	background: linear-gradient(135deg, #C0826D 0%,#C0826D 50%,#BA765F 50%,#BA765F 100%);
+}
+
+
+@keyframes spin {
+    0% {transform: scale(1, 1);}
+    50% {transform: scale(2,2);}
+    100% {transform: scale(1, 1);}
+}

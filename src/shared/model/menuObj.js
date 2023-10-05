@@ -71,4 +71,12 @@ export const menuObj = {
     url: "/day19",
     name: "說一下話吧！！",
   },
+  day20: {
+    url: "/day20",
+    name: "颱風假～～～～想放假 TAT!!!!!",
+  },
+  day21: {
+    url: "/day21",
+    name: "我要滿滿的金牌！！！",
+  },
 };
