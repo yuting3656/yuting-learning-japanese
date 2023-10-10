@@ -83,4 +83,8 @@ export const menuObj = {
     url: "/day222324",
     name: "撐住！失敗為成功之母！倒數最後7天！認真寫完它吧！",
   },
+  day25: {
+    url: "/day25",
+    name: "文字轉盤～～",
+  },
 };
