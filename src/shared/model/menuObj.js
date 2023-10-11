@@ -87,4 +87,8 @@ export const menuObj = {
     url: "/day26",
     name: "文字轉盤～～",
   },
+  day27: {
+    url: "/day27",
+    name: "寫字寫起來~~~",
+  },
 };
